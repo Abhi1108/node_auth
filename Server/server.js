@@ -6,7 +6,10 @@ const cookieParser = require("cookie-parser");
 const app = express();
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/auth", { useNewUrlParser: true });
+mongoose.connect(
+  "mongodb+srv://AbhiHD:123Karan321@cluster0-q0lxo.mongodb.net/test?retryWrites=true/user",
+  { useNewUrlParser: true }
+);
 
 const { User } = require("./Models/user");
 const { auth } = require(".//middleware/auth");
